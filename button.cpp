@@ -4,7 +4,7 @@ void Button::draw()
 {
     DWORD drawed_text;
     SetConsoleTextAttribute(cmd_handle, 7);
-    if(selected)
+    if(activated)
     {
         SetConsoleTextAttribute(cmd_handle, select_color);
     }
@@ -32,12 +32,12 @@ void Button::remove()
     }
 }
 
-void Button::select()
+void Button::set_activated(bool is_activated)
 {
-    selected = true;
+    activated = is_activated;
 }
 
 void Button::press()
 {
-    selected = false;
+    set_activated(false);
 }

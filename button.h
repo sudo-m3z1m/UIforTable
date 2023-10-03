@@ -6,10 +6,12 @@ struct Button
     COORD position;
     short select_color = 6;
     int width, height;
-    bool selected;
-    char text[20];
+    bool activated;
+    char text[20] = "Push it";
     void draw();
     void remove();
-    void select();
+    void set_activated(bool is_activated);
+    // void select();
+    // void deselect();
     void press();
 };
