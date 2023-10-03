@@ -1,16 +1,11 @@
 #include "windows_manager.h"
 
-void WindowManager::make_window(COORD pos, Window new_window)
-{
-
-}
-
 void WindowManager::change_window(Window new_window)
 {
 
 }
 
-void WindowManager::draw_windows()
+void WindowManager::draw_window()
 {
 
 }
@@ -20,7 +15,7 @@ void WindowManager::close_window(Window window)
 
 }
 
-int WindowManager::input()
+int WindowManager::check_user_input()
 {
     if(GetAsyncKeyState(VK_LEFT) & 0x7FFF)
         return VK_LEFT;
