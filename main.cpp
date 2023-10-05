@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+    cout << "Hello";
     WindowManager windows;
     Button but;
     COORD but_pos;
@@ -19,5 +20,5 @@ int main()
             but.set_activated(true);
         but.draw();
     }
-    
+    return 1;
 }

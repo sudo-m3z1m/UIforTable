@@ -11,7 +11,5 @@ struct Button
     void draw();
     void remove();
     void set_activated(bool is_activated);
-    // void select();
-    // void deselect();
     void press();
 };

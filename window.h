@@ -1,4 +1,3 @@
-#include <Windows.h>
 #include "button.h"
 
 struct Window

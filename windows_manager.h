@@ -2,7 +2,7 @@
 
 struct WindowManager
 {
-    // Window all_windows[5];
+    Window all_windows[5];
     Window current_window;
     void change_window(Window new_window);
     void draw_window();
