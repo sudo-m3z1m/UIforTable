@@ -1,3 +1,7 @@
-﻿  button.cpp
-D:\GitProjects\UIforTable\button.cpp(6,11): warning C4101: drawed_text: неиспользованная локальная переменная
+﻿  main.cpp
+  window.cpp
+  windows_manager.cpp
+D:\GitProjects\UIforTable\windows_manager.cpp(21,11): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+D:\GitProjects\UIforTable\windows_manager.cpp(24,17): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  Создание кода...
   UIforTable.vcxproj -> D:\GitProjects\UIforTable\x64\Debug\UIforTable.exe
