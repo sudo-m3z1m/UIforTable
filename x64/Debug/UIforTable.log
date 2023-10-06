@@ -1,0 +1,3 @@
+﻿  button.cpp
+D:\GitProjects\UIforTable\button.cpp(6,11): warning C4101: drawed_text: неиспользованная локальная переменная
+  UIforTable.vcxproj -> D:\GitProjects\UIforTable\x64\Debug\UIforTable.exe
