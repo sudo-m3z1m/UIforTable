@@ -6,31 +6,29 @@ using namespace std;
 int main()
 {
     WindowManager windows;
-    Button but;
-    Button but2;
-    but.x = 2;
-    but.y = 1;
-    but.draw();
+    Window window;
+    //window.x = 0; window.y = 0;
+    for (int i = 0; i < 4; i++)
+    {
+        window.buttons[i].y = i+i + 4;
+        window.buttons[i].x = 5;
+    }
+    window.draw();
     while (true)
     {
         int key = windows.check_user_input();
-        switch(key)
+        switch (key)
         {
-        case windows.Enter:
-        case windows.KeyLeft:
         case windows.KeyUp:
-        case windows.KeyRight:
+            window.change_active_button(-1);
+            break;
+
         case windows.KeyDown:
-            but.set_activated(!but.activated);
-            but.draw();
+            window.change_active_button(1);
             break;
-        case windows.Esc:
-            but.set_activated(false);
-            but.draw();
-            break;
+
         default:
             break;
         }
     }
-    return 1;
 }
