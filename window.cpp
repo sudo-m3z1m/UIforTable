@@ -2,6 +2,24 @@
 
 void Window::draw()
 {
+	DWORD drawed_characters;
+	for (int w = 0; w <= width; w++)
+	{
+		for (int h = 0; h <= height; h++)
+		{
+			COORD pos = { w, h };
+			char symbol = ' ';
+
+			if ((h == y) || (h == height))
+				symbol = '-';
+
+			else if ((w == x) || (w == width))
+				symbol = '|';
+
+			FillConsoleOutputCharacter(cmd_handle, symbol, 1, pos, &drawed_characters);
+		}
+	}
+
 	for (int but = 0; but < 4; but++)
 	{
 		buttons[but].draw();

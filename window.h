@@ -4,6 +4,7 @@ struct Window
 {
     int width, height;
     int x, y;
+    HANDLE cmd_handle = GetStdHandle(STD_OUTPUT_HANDLE);
     Button buttons[4];
     int cur_but_index = 0;
     char name[8];
