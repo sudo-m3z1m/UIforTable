@@ -1,4 +1,4 @@
-#include "window.h"
+﻿#include "window.h"
 
 void Window::draw()
 {
@@ -10,13 +10,27 @@ void Window::draw()
 			COORD pos = { w, h };
 			char symbol = ' ';
 
-			if ((h == y) || (h == height))
-				symbol = '-';
+			if ((h == y) || (h == height)) //using ASCII CP437
+				symbol = '\xc4';
 
 			else if ((w == x) || (w == width))
-				symbol = '|';
+				symbol = '\xb3';
+
+			if ((w == x) && (h == y))
+				symbol = '\xda';
+
+			else if ((w == width) && (h == y))
+				symbol = '\xbf';
+
+			else if ((w == x) && (h == height))
+				symbol = '\xc0';
+
+			else if ((w == width) && (h == height))
+				symbol = '\xd9';
 
 			FillConsoleOutputCharacter(cmd_handle, symbol, 1, pos, &drawed_characters);
+
+
 		}
 	}
 

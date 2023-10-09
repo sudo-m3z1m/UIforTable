@@ -1,2 +1,4 @@
-﻿  main.cpp
+﻿  window.cpp
+D:\GitProjects\UIforTable\window.cpp(10,18): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\GitProjects\UIforTable\window.cpp(10,21): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
   UIforTable.vcxproj -> D:\GitProjects\UIforTable\x64\Debug\UIforTable.exe
