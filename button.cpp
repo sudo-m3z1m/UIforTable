@@ -9,13 +9,17 @@ void Button::draw()
     position.Y = y;
 
     if(activated)
-        //system("Color 12");
         SetConsoleTextAttribute(cmd_handle, select_color);
     else
         SetConsoleTextAttribute(cmd_handle, color);
 
     SetConsoleCursorPosition(cmd_handle, position);
     std::cout << text;
+}
+
+void Button::set_text(char* _text)
+{
+    strcpy(text, _text);
 }
 
 void Button::remove()

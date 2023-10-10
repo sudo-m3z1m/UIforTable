@@ -11,27 +11,31 @@ void Window::draw()
 			char symbol = ' ';
 
 			if ((h == y) || (h == height)) //using ASCII CP437
-				symbol = '\xc4';
+				symbol = char(196);
 
 			else if ((w == x) || (w == width))
-				symbol = '\xb3';
+				symbol = char(179);
 
 			if ((w == x) && (h == y))
-				symbol = '\xda';
+				symbol = char(218);
 
 			else if ((w == width) && (h == y))
-				symbol = '\xbf';
+				symbol = char(191);
 
 			else if ((w == x) && (h == height))
-				symbol = '\xc0';
+				symbol = char(192);
 
 			else if ((w == width) && (h == height))
-				symbol = '\xd9';
+				symbol = char(217);
 
 			FillConsoleOutputCharacter(cmd_handle, symbol, 1, pos, &drawed_characters);
-
-
 		}
+	}
+
+	for (int i = 0; i < 32; i++)
+	{
+		COORD pos = { text_pos.X + i, text_pos.Y };
+		FillConsoleOutputCharacter(cmd_handle, window_text[i], 1, pos, &drawed_characters);
 	}
 
 	for (int but = 0; but < 4; but++)

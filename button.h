@@ -11,7 +11,8 @@ struct Button
     short color = 7;
     int width, height;
     bool activated = false;
-    char text[20] = "Push it";
+    char text[16];
+    void set_text(char* _text);
     void draw();
     void remove();
     void set_activated(bool is_activated);
