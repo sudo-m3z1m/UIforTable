@@ -5,14 +5,14 @@ void WindowManager::change_window(Window new_window)
 
 }
 
-void WindowManager::draw_window()
+void WindowManager::draw_windows()
 {
-
-}
-
-void WindowManager::close_window(Window window)
-{
-
+    for (int i = 0; i < 5; i++)
+    {
+        windows[i].draw();
+        if (current_window == &windows[i])
+            return;
+    }
 }
 
 int WindowManager::check_user_input()

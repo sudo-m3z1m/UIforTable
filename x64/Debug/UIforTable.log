@@ -1,5 +1,4 @@
-﻿  window.cpp
-D:\GitProjects\UIforTable\window.cpp(10,18): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
-D:\GitProjects\UIforTable\window.cpp(10,21): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
-D:\GitProjects\UIforTable\window.cpp(37,28): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+﻿  windows_manager.cpp
+D:\GitProjects\UIforTable\windows_manager.cpp(21,11): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+D:\GitProjects\UIforTable\windows_manager.cpp(24,17): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   UIforTable.vcxproj -> D:\GitProjects\UIforTable\x64\Debug\UIforTable.exe

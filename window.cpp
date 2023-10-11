@@ -32,10 +32,13 @@ void Window::draw()
 		}
 	}
 
-	for (int i = 0; i < 32; i++)
+	int lit_i = 0;
+
+	while (window_text[lit_i] != '\0')
 	{
-		COORD pos = { text_pos.X + i, text_pos.Y };
-		FillConsoleOutputCharacter(cmd_handle, window_text[i], 1, pos, &drawed_characters);
+		COORD pos = { t_x + lit_i, t_y };
+		FillConsoleOutputCharacter(cmd_handle, window_text[lit_i], 1, pos, &drawed_characters);
+		lit_i++;
 	}
 
 	for (int but = 0; but < 4; but++)
@@ -56,8 +59,6 @@ void Window::change_active_button(short dir)
 	buttons[next_but_index].set_activated(true);
 
 	cur_but_index = next_but_index;
-
-	draw();
 }
 
 void Window::close()
