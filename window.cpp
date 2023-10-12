@@ -3,9 +3,9 @@
 void Window::draw()
 {
 	DWORD drawed_characters;
-	for (int w = 0; w <= width; w++)
+	for (int w = x; w <= width; w++)
 	{
-		for (int h = 0; h <= height; h++)
+		for (int h = y; h <= height; h++)
 		{
 			COORD pos = { w, h };
 			char symbol = ' ';

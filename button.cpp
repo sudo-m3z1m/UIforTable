@@ -8,6 +8,9 @@ void Button::draw()
     position.X = x;
     position.Y = y;
 
+    if (text[0] == ' ')
+        return;
+
     if(activated)
         SetConsoleTextAttribute(cmd_handle, select_color);
     else
