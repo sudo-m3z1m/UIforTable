@@ -10,6 +10,9 @@ struct Window
     int cur_but_index = 0;
     char name[8];
     char window_text[32] = "Welcome to cmd tables app";
+
+    void set_name(char* _name);
+    void set_text(char* _text);
     void draw();
     void change_active_button(short dir = 0);
     void close();

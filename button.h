@@ -9,9 +9,8 @@ struct Button
     short x, y;
     short select_color = 6;
     short color = 7;
-    int width, height;
     bool activated = false;
-    char text[16] = " ";
+    char text[16];
     void set_text(char* _text);
     void draw();
     void remove();

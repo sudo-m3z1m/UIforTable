@@ -8,7 +8,7 @@ void Button::draw()
     position.X = x;
     position.Y = y;
 
-    if (text[0] == ' ')
+    if (text[0] == '\0')
         return;
 
     if(activated)

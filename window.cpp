@@ -61,6 +61,16 @@ void Window::change_active_button(short dir)
 	cur_but_index = next_but_index;
 }
 
+void Window::set_name(char* _name)
+{
+	strcpy(name, _name);
+}
+
+void Window::set_text(char* _text)
+{
+	strcpy(window_text, _text);
+}
+
 void Window::close()
 {
 
