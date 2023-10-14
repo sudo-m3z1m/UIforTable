@@ -39,8 +39,12 @@ Button WindowManager::make_button(int but_x, int but_y, char* but_text,
 
     for (int win = 0; win < 5; win++)
     {
-        if (windows[win].name == win_name)
+        for (int i = 0; i < 8; i++)
         {
+            if(windows[win].name[i] != win_name[i]) //It's working very bad, need to remade this
+            {
+                break;
+            }
             windows[win].buttons[but_num] = new_but;
             return new_but;
         }

@@ -6,17 +6,17 @@ using namespace std;
 int main()
 {
     WindowManager windows;
-    Window window = windows.make_window(0, 0, 32, 16, 3, 3, "test",
+    Window window = windows.make_window(0, 0, 40, 32, 3, 3, "test",
         "Welcome to cmd tables app");
 
-    windows.windows[0] = window;
+    windows.windows[3] = window;
 
-    windows.make_button(5, 5, "Next", windows.windows[0].name, 0, true, 7, 6);
-    windows.make_button(5, 7, "Well", windows.windows[0].name, 1, false, 7, 6);
-    windows.make_button(5, 9, "Fuck", windows.windows[0].name, 2, false, 7, 6);
-    windows.make_button(5, 11, "Strings", windows.windows[0].name, 3, false, 7, 6);
+    windows.make_button(5, 10, "Next", "test", 0, true, 7, 6);
+    windows.make_button(5, 15, "Well", "test", 1, false, 7, 6);
+    windows.make_button(5, 20, "Fuck", "test", 2, false, 7, 6);
+    windows.make_button(5, 25, "Strings", "test", 3, false, 7, 6);
 
-    windows.current_window = &windows.windows[0];
+    windows.current_window = &windows.windows[3];
 
     windows.draw_windows();
 
